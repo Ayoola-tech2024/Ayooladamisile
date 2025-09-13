@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayoola Damisile | Frontend Developer & Pianist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+        #vanta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div id="vanta-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-gradient">Ayoola Damisile</div>
+        <div class="hidden md:flex space-x-8">
+            <a href="#about" class="hover:text-blue-400 transition">About</a>
+            <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+            <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+            <a href="#faith" class="hover:text-blue-400 transition">Faith</a>
+            <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
+        </div>
+        <button class="md:hidden">
+            <i data-feather="menu"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-20 md:py-32 text-center">
+        <div data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                <span class="text-gradient">Frontend Developer</span> & <br>
+                <span class="text-gradient">Pianist</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
+                Crafting digital experiences with code and creating melodies with keys.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#projects" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full font-medium transition hover-scale">
+                    View My Work
+                </a>
+                <a href="contact.html" class="px-8 py-3 border border-blue-400 text-blue-400 hover:bg-blue-900/30 rounded-full font-medium transition hover-scale">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto px-6 py-20">
+        <div class="glass-card p-8 md:p-12 rounded-xl" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gradient">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg mb-6">
+                        Hello! I'm Ayoola Damisile, a passionate frontend developer with a deep love for creating beautiful, functional digital experiences.
+                    </p>
+                    <p class="text-lg mb-6">
+                        When I'm not coding, you'll find me at the piano, where I express myself through music. My faith is central to my life as I attend Apostle Faith Church.
+                    </p>
+                    <p class="text-lg">
+                        I believe in the power of technology to transform lives and the power of music to touch souls.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-200"></div>
+                        <img src="http://static.photos/technology/640x360/42" alt="Ayoola Damisile" class="relative rounded-xl w-full max-w-md">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container mx-auto px-6 py-20">
+        <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-gradient" data-aos="fade-up">Featured Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Project 1 -->
+            <div class="glass-card p-6 rounded-xl hover-scale" data-aos="fade-up">
+                <div class="mb-4 overflow-hidden rounded-lg">
+                    <img src="http://static.photos/fashion/1024x576/1" alt="DamiQueen Footwear" class="w-full h-48 object-cover">
+                </div>
+                <h3 class="text-2xl font-bold mb-2">DamiQueen Footwear</h3>
+                <p class="text-gray-300 mb-4">An elegant e-commerce platform for premium footwear.</p>
+                <a href="https://damiqueenfootwear.onrender.com" target="_blank" class="text-blue-400 hover:text-blue-300 flex items-center">
+                    Visit Project <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="glass-card p-6 rounded-xl hover-scale" data-aos="fade-up" data-aos-delay="100">
+                <div class="mb-4 overflow-hidden rounded-lg">
+                    <img src="http://static.photos/portfolio/1024x576/2" alt="Personal Portfolio" class="w-full h-48 object-cover">
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Personal Portfolio</h3>
+                <p class="text-gray-300 mb-4">A showcase of my work and skills as a developer.</p>
+                <a href="https://ayoola-damisile.onrender.com" target="_blank" class="text-blue-400 hover:text-blue-300 flex items-center">
+                    Visit Project <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container mx-auto px-6 py-20">
+        <div class="glass-card p-8 md:p-12 rounded-xl" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gradient">Skills & Expertise</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i data-feather="code" class="mr-2 text-blue-400"></i> Development
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i data-feather="check" class="mr-2 text-green-400 w-4 h-4"></i> HTML5 & CSS3</li>
+                        <li class="flex items-center"><i data-feather="check" class="mr-2 text-green-400 w-4 h-4"></i> JavaScript (ES6+)</li>
+                        <li class="flex items-center"><i data-feather="check" class="mr-2 text-green-400 w-4 h-4"></i> React.js</li>
+                        <li class="flex items-center"><i data-feather="check" class="mr-2 text-green-400 w-4 h-4"></i> Tailwind CSS</li>
+                        <li class="flex items-center"><i data-feather="check" class="mr-2 text-green-400 w-4 h-4"></i> Responsive Design</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i data-feather="music" class="mr-2 text-purple-400"></i> Music
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i data-feather="check" class="mr-2 text-green-400 w-4 h-4"></i> Piano Performance</li>
+                        <li class="flex items-center"><i data-feather="check" class="mr-2 text-green-400 w-4 h-4"></i> Music Composition</li>
+                        <li class="flex items-center"><i data-feather="check" class="mr-2 text-green-400 w-4 h-4"></i> Worship Music</li>
+                        <li class="flex items-center"><i data-feather="check" class="mr-2 text-green-400 w-4 h-4"></i> Music Theory</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i data-feather="tool" class="mr-2 text-yellow-400"></i> Tools
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i data-feather="check" class="mr-2 text-green-400 w-4 h-4"></i> Git & GitHub</li>
+                        <li class="flex items-center"><i data-feather="check" class="mr-2 text-green-400 w-4 h-4"></i> VS Code</li>
+                        <li class="flex items-center"><i data-feather="check" class="mr-2 text-green-400 w-4 h-4"></i> Figma</li>
+                        <li class="flex items-center"><i data-feather="check" class="mr-2 text-green-400 w-4 h-4"></i> Adobe Creative Suite</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faith Section -->
+    <section id="faith" class="container mx-auto px-6 py-20">
+        <div class="glass-card p-8 md:p-12 rounded-xl" data-aos="fade-up">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gradient">My Faith Journey</h2>
+                    <p class="text-lg mb-6">
+                        As a member of Apostle Faith Church, my faith in God is the foundation of everything I do. It inspires my creativity, guides my decisions, and gives purpose to my work.
+                    </p>
+                    <p class="text-lg">
+                        Whether through code or music, I strive to reflect God's love and creativity in all my endeavors.
+                    </p>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-200"></div>
+                        <img src="http://static.photos/faith/640x360/3" alt="Faith" class="relative rounded-xl w-full max-w-md">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-6 py-12 border-t border-gray-800 mt-20">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-xl font-bold text-gradient mb-4 md:mb-0">Ayoola Damisile</div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-blue-400 transition">
+                    <i data-feather="github"></i>
+                </a>
+                <a href="#" class="hover:text-blue-400 transition">
+                    <i data-feather="twitter"></i>
+                </a>
+                <a href="#" class="hover:text-blue-400 transition">
+                    <i data-feather="linkedin"></i>
+                </a>
+                <a href="#" class="hover:text-blue-400 transition">
+                    <i data-feather="instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-400">
+            &copy; 2023 Ayoola Damisile. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3b82f6,
+            backgroundColor: 0x111827,
+            size: 0.8
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+</body>
+</html>

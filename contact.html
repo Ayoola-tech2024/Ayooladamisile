@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Ayoola Damisile | Frontend Developer & Pianist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+        #vanta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        .form-input {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div id="vanta-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold text-gradient">Ayoola Damisile</a>
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+            <a href="index.html#about" class="hover:text-blue-400 transition">About</a>
+            <a href="index.html#projects" class="hover:text-blue-400 transition">Projects</a>
+            <a href="index.html#faith" class="hover:text-blue-400 transition">Faith</a>
+            <a href="contact.html" class="text-blue-400 hover:text-blue-300 transition">Contact</a>
+        </div>
+        <button class="md:hidden">
+            <i data-feather="menu"></i>
+        </button>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="container mx-auto px-6 py-20">
+        <div class="glass-card p-8 md:p-12 rounded-xl max-w-4xl mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-2 text-gradient">Get In Touch</h2>
+            <p class="text-lg text-gray-300 mb-8">Have a project in mind or want to collaborate? Feel free to reach out!</p>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg form-input focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg form-input focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="subject" class="block mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 rounded-lg form-input focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg form-input focus:outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full font-medium transition hover-scale w-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div>
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="bg-blue-900/30 p-3 rounded-lg mr-4">
+                                <i data-feather="mail" class="text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Email Me</h3>
+                                <a href="mailto:damisileayoola@gmail.com" class="text-blue-400 hover:text-blue-300">damisileayoola@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-900/30 p-3 rounded-lg mr-4">
+                                <i data-feather="phone" class="text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Call Me</h3>
+                                <p>Available for freelance work</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-pink-900/30 p-3 rounded-lg mr-4">
+                                <i data-feather="map-pin" class="text-pink-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-1">Location</h3>
+                                <p>Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h3 class="text-xl font-bold mb-4">Connect With Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition">
+                                <i data-feather="github"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition">
+                                <i data-feather="twitter"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-gray-700 p-3 rounded-full transition">
+                                <i data-feather="instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-6 py-12 border-t border-gray-800 mt-20">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-xl font-bold text-gradient mb-4 md:mb-0">Ayoola Damisile</div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-blue-400 transition">
+                    <i data-feather="github"></i>
+                </a>
+                <a href="#" class="hover:text-blue-400 transition">
+                    <i data-feather="twitter"></i>
+                </a>
+                <a href="#" class="hover:text-blue-400 transition">
+                    <i data-feather="linkedin"></i>
+                </a>
+                <a href="#" class="hover:text-blue-400 transition">
+                    <i data-feather="instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-400">
+            &copy; 2023 Ayoola Damisile. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3b82f6,
+            backgroundColor: 0x111827,
+            points: 12.00,
+            maxDistance: 22.00,
+            spacing: 18.00
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:damisileayoola@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`)}`;
+            
+            // Open default email client
+            window.location.href = mailtoLink;
+            
+            // Reset form
+            this.reset();
+            
+            // Show success message (you could replace this with a more sophisticated notification)
+            alert('Your message has been prepared in your email client. Please send it to complete the process.');
+        });
+    </script>
+</body>
+</html>
