@@ -259,5 +259,24 @@
         // Initialize Feather Icons
         feather.replace();
     </script>
+    <!-- Toggle Script -->
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    let menuOpen = false;
+
+    menuToggle.addEventListener("click", () => {
+        menuOpen = !menuOpen;
+        mobileMenu.classList.toggle("hidden");
+
+        // Switch icon
+        if (menuOpen) {
+            menuToggle.innerHTML = `<i data-feather="x" class="w-7 h-7"></i>`;
+        } else {
+            menuToggle.innerHTML = `<i data-feather="menu" class="w-7 h-7"></i>`;
+        }
+        feather.replace(); // re-render feather icons
+    });
+</script>
 </body>
 </html>
