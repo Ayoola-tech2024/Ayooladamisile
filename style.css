@@ -26,3 +26,31 @@ p {
 .card p:last-child {
 	margin-bottom: 0;
 }
+/* Mobile menu slide-down */
+#mobile-menu {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* When menu is open */
+#mobile-menu.open {
+    max-height: 500px; /* adjust if needed */
+}
+
+/* Optional: slide/fade effect for links */
+#mobile-menu a {
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#mobile-menu.open a {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
