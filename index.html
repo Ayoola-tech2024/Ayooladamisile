@@ -259,6 +259,43 @@
 
         // Initialize Feather Icons
         feather.replace();
+// Mobile menu toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+
+    // Optional: change icon from menu to X
+    const icon = menuBtn.querySelector('i');
+    if (mobileMenu.classList.contains('open')) {
+        icon.setAttribute('data-feather', 'x');
+    } else {
+        icon.setAttribute('data-feather', 'menu');
+    }
+    feather.replace();
+});
+
+// Smooth scrolling for internal links
+const navLinks = document.querySelectorAll('a[href^="#"]');
+navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Close mobile menu after clicking a link
+        if (mobileMenu.classList.contains('open')) {
+            mobileMenu.classList.remove('open');
+            // reset icon
+            const icon = menuBtn.querySelector('i');
+            icon.setAttribute('data-feather', 'menu');
+            feather.replace();
+        }
+    });
+});
     </script>
 </body>
 </html>
