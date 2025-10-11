@@ -66,19 +66,32 @@
     <div id="vanta-bg"></div>
     
     <!-- Navigation -->
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="text-2xl font-bold text-gradient">Ayoola Damisile Ayooluwa</div>
-        <div class="hidden md:flex space-x-8">
-            <a href="#about" class="hover:text-blue-400 transition">About</a>
-            <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-            <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
-            <a href="#faith" class="hover:text-blue-400 transition">Faith</a>
-            <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
-        </div>
-        <button class="md:hidden">
-            <i data-feather="menu"></i>
-        </button>
-    </nav>
+<nav class="container mx-auto px-6 py-4 flex justify-between items-center relative">
+    <div class="text-2xl font-bold text-gradient">Ayoola Damisile Ayooluwa</div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-8">
+        <a href="#about" class="hover:text-blue-400 transition">About</a>
+        <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+        <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+        <a href="#faith" class="hover:text-blue-400 transition">Faith</a>
+        <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden">
+        <i data-feather="menu"></i>
+    </button>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-gray-900 border-t border-gray-800 flex-col space-y-4 p-6 md:hidden">
+        <a href="#about" class="hover:text-blue-400 transition block">About</a>
+        <a href="#projects" class="hover:text-blue-400 transition block">Projects</a>
+        <a href="#skills" class="hover:text-blue-400 transition block">Skills</a>
+        <a href="#faith" class="hover:text-blue-400 transition block">Faith</a>
+        <a href="contact.html" class="hover:text-blue-400 transition block">Contact</a>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section class="container mx-auto px-6 py-20 md:py-32 text-center">
@@ -283,7 +296,7 @@ const mobileMenu = document.getElementById('mobile-menu');
 
 menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('open');
-
+mobileMenu.classList.toggle('hidden');
     // Optional: change icon from menu to X
     const icon = menuBtn.querySelector('i');
     if (mobileMenu.classList.contains('open')) {
